@@ -1,0 +1,12 @@
+config_ordinal: 101 # one greater than the default
+server:
+  port: 8081
+javax:
+    sql:
+        DataSource:
+            testGreetingDataSource:
+                dataSourceClassName: org.h2.jdbcx.JdbcDataSource
+                dataSource:
+                    url: jdbc:h2:mem:testgreeting;INIT=RUNSCRIPT FROM 'classpath:greeting.ddl' 
+                    user: sa
+                    password: ""
